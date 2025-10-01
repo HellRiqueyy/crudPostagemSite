@@ -1,0 +1,45 @@
+body {
+    background-color: #f5f5f5;
+}
+
+#list-conteiner {
+    display: block;
+    justify-items: center;
+}
+
+.postTitulo {
+    color: #160091;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.postContent {
+    color: #160091;
+}
+
+.postCategoria {
+    color: gray;
+}
+
+.btn-excluir {
+    background-color: rgb(149, 13, 13);
+    color: white;
+    cursor: pointer;
+}
+
+.btn-editar {
+    background-color: rgb(5, 71, 5);
+    color: white;
+    cursor: pointer;
+}
+
+.post-item {
+    background-color: gainsboro;
+    padding: 1em;
+    transition: all 0.2s ease;
+    margin-top: 1em;
+}
+
+.post-item:hover {
+    transform: scale(1.02);
+}

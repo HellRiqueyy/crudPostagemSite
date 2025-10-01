@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostExample</title>
+</head>
+
+<body>
+    <div id="header-content"></div>
+
+    <div class="post-conteiner">
+        <h2 id="titlePost">PostExample</h2>
+        <p id="contentPost">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean laoreet ullamcorper tortor
+            at mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In
+            suscipit iaculis libero lobortis fringilla. Duis dolor tellus, faucibus quis pulvinar et, mollis
+            pellentesque felis. Vestibulum nec elit posuere, vestibulum ipsum vitae, sollicitudin enim. Morbi vulputate
+            at lorem a pellentesque. Maecenas commodo semper quam, a lacinia dolor scelerisque ut. Aenean vitae aliquam
+            ex, sit amet aliquet libero. In volutpat, neque eget dictum vehicula, ligula eros porttitor mauris, nec
+            lobortis orci metus vitae neque. Fusce et nisi quam. Ut tempus cursus magna, vitae ornare justo blandit
+            efficitur. Vivamus magna sem, varius eu vestibulum in, blandit id orci. In pellentesque libero nec malesuada
+            pretium.
+
+            Mauris ut sagittis ante. In vel convallis tellus. Aliquam bibendum elit at volutpat pulvinar. Proin pharetra
+            felis eu nulla suscipit vulputate. Sed vel dui ante. Vestibulum et lorem velit. Curabitur sollicitudin erat
+            suscipit pharetra gravida. Aenean vitae fermentum lorem. Pellentesque pellentesque faucibus nunc id porta.
+            In hac habitasse platea dictumst. Nunc non ultricies eros. Morbi pretium faucibus pulvinar. Vestibulum
+            cursus tincidunt pellentesque.
+
+            Nullam vitae velit id ipsum convallis porta. Sed commodo nisi non sem aliquet, et vehicula ante
+            sollicitudin. Pellentesque sagittis mauris lectus, ut consectetur enim ullamcorper eu. Nullam sed accumsan
+            elit. Proin a arcu mattis, placerat nisi sed, efficitur arcu. Ut risus tellus, eleifend eu augue vel, dictum
+            malesuada diam. Quisque arcu neque, vulputate sit amet placerat nec, dignissim a lorem. Donec accumsan eros
+            tincidunt tortor aliquam viverra. Donec porta augue eros, ac placerat justo porta vel. Lorem ipsum dolor sit
+            amet, consectetur adipiscing elit.
+
+            Etiam et lacus eget dolor euismod pulvinar. Donec nec ante varius, bibendum magna eget, condimentum eros.
+            Nunc at purus luctus mi vehicula pellentesque. Vivamus sagittis risus elit, sit amet volutpat mauris
+            volutpat vel. Suspendisse sed lectus molestie, bibendum purus id, molestie dui. Nunc porttitor tortor eget
+            nulla placerat, et condimentum tortor cursus. Aenean eu ultrices diam, ac condimentum purus. Maecenas
+            elementum porttitor odio, sed feugiat mi imperdiet vitae. Nullam sed malesuada nisi. Curabitur tincidunt
+            diam eget hendrerit maximus.
+
+            Nullam malesuada tellus id justo vestibulum, non tincidunt magna tincidunt. In eu quam commodo, elementum
+            nulla vitae, venenatis dui. Praesent fermentum mollis nisl eget hendrerit. Sed laoreet sagittis velit. Duis
+            tempus nisi mattis nisl dapibus gravida eget sed dui. Suspendisse vulputate tortor quis libero faucibus
+            dapibus. Maecenas pulvinar ut neque non vestibulum. Sed elementum eget sem non tempus. Praesent lobortis
+            ipsum et est tempor, tempor fermentum lacus fringilla. Cras et dictum felis. Mauris vulputate metus a
+            suscipit lobortis. Sed venenatis dapibus aliquet. Quisque feugiat efficitur nunc.</p>
+    </div>
+
+    <script>
+        async function loadHeader() {
+            const response = await fetch('./../contents/header.html');
+            const headerHTML = await response.text();
+            document.getElementById('header-content').innerHTML = headerHTML;
+        }
+        loadHeader();
+    </script>
+</body>
+
+</html>
