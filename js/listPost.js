@@ -37,11 +37,14 @@ function renderizarListaPost(post) {
         const postDiv = document.createElement("div");
         postDiv.classList.add("post-item");
         postDiv.innerHTML = `
+        <img class="postImagem" src="${posts.imagem}">
+        <div class ="postDirection">
         <p class="postTitulo"> ${posts.title} </p>
         <p class="postContent">${posts.content}</p>
         <p class="postCategoria">${posts.category}</p> 
         <button class="btn-excluir" data-id="${posts.id}"> Excluir </button>
         <button class="btn-editar" data-id="${posts.id}"> Editar </button> 
+        </div>
         `
         listaPostDiv.appendChild(postDiv)
     }
@@ -88,7 +91,7 @@ async function lidarClique(eventoDeClique) {
         const posts = await buscarPostPorId(idPost)
 
         edicao = getValoresEditar()
-
+        edicao.editarImagem.value = posts.imagem
         edicao.editarTitulo.value = posts.title
         edicao.editarCategoria.value = posts.category
         edicao.editarContent.value = posts.content
@@ -100,6 +103,7 @@ async function lidarClique(eventoDeClique) {
 
 function getValoresEditar() {
     return {
+        editarImagem: document.getElementById("editar-imagem"),
         editarTitulo: document.getElementById("editar-titulo"),
         editarCategoria: document.getElementById("editar-categoria"),
         editarContent: document.getElementById("editar-content"),
@@ -134,6 +138,7 @@ document.getElementById("btnSalvarEdicao").addEventListener("click", async () =>
         title: edicao.editarTitulo.value.trim(),
         category: edicao.editarCategoria.value,
         content: edicao.editarContent.value.trim(),
+        imagem: edicao.editarImagem.value
     }
 
     try {
